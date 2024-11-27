@@ -1,6 +1,5 @@
 # rocketleague replay coach
 
-
 #### **Rocket League Replay Coach**
 A tool that interfaces with AI for analyzing Rocket League replays, offering insights into gameplay strategy, player performance, and goal scenarios. Ideal for casual players, competitive gamers, and coaches aiming to refine gameplay.
 
@@ -14,26 +13,19 @@ A tool that interfaces with AI for analyzing Rocket League replays, offering ins
 
 ---
 
-
-
 ### **Docker Setup**
 
-1.
-   
-
-#### **Examples**
 ```
-export OPENAI_API_KEY="sk-proj-your-secet-openai-key"
-export PLAYER_NAME="Ether Zephyr"
-..docker example...
+docker build -t rocketleague-replay-coach .
 ```
 
-### running your local replays
+#### **Example**
+
 ```
 export RL_REPLAY_DIR="/mnt/c/Users/gamez/OneDrive/Documents/My Games/Rocket League/TAGame/DemosEpic/"
 export OPENAI_API_KEY="sk-proj-your-secret-openai-key"
 export PLAYER_NAME="Your Player Name"
-...docker example...
+docker run -e PLAYER_NAME="YourPlayerName" -e OPENAI_API_KEY="YourAPIKey" -e RL_REPLAY_DIR="/path/to/replays" rocketleague-replay-coach
 ```
 
 ### **Local Setup**
@@ -51,14 +43,14 @@ export PLAYER_NAME="Your Player Name"
 3.    ...mention rattletrap needs to be on the path.
 
 
-#### **Examples**
+#### **Example**
 ```
 export OPENAI_API_KEY="sk-proj-your-secet-openai-key"
 export PLAYER_NAME="Ether Zephyr"
 ./replay_example.sh
 ```
 
-### running your local replays
+### local replays
 ```
 export RL_REPLAY_DIR="/mnt/c/Users/gamez/OneDrive/Documents/My Games/Rocket League/TAGame/DemosEpic/"
 export OPENAI_API_KEY="sk-proj-your-secret-openai-key"
