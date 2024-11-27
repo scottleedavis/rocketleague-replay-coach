@@ -3,6 +3,8 @@
 #### **Rocket League Replay Coach**
 A tool that interfaces with AI for analyzing Rocket League replays, offering insights into gameplay strategy, player performance, and goal scenarios. Ideal for casual players, competitive gamers, and coaches aiming to refine gameplay.
 
+See an [example summary here.](examples/example_summary.md)
+
 ---
 
 ### **Docker Setup**
