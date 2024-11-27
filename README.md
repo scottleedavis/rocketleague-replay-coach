@@ -40,14 +40,15 @@ docker run -e PLAYER_NAME="YourPlayerName" -e OPENAI_API_KEY="YourAPIKey" -e RL_
    pip install -r requirements.txt
 
    ```
-3.    ...mention rattletrap needs to be on the path.
+3. [rattletrap](https://github.com/tfausak/rattletrap) available on the $PATH (also in this repo)
 
 
 #### **Example**
 ```
+export RL_REPLAY_DIR="$(pwd)/examples" 
 export OPENAI_API_KEY="sk-proj-your-secet-openai-key"
 export PLAYER_NAME="Ether Zephyr"
-./replay_example.sh
+./replay_coach.sh
 ```
 
 ### local replays
