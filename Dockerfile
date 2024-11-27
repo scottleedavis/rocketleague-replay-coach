@@ -8,14 +8,14 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the application code
+COPY examples examples
 COPY rocketleague_replay_coach/ ./rocketleague_replay_coach
-COPY *.py . 
-COPY *.sh .
+COPY setup.py . 
+COPY replay_coach.sh .
 COPY rattletrap .
+COPY schema.json .
 
-# set env variables
-# PLAYER_NAME, OPENAI_API_KEY, RL_REPLAY_DIR for all scripts
+ENV PATH=/app:$PATH
 
 # Run the application
 CMD ["bash", "replay_coach.sh"]

@@ -11,12 +11,7 @@ See an [example summary here.](examples/example_summary.md)
 
 ```
 docker build -t rocketleague-replay-coach .
-```
-
-#### **Example**
-
-```
-docker run -e PLAYER_NAME="Ether Zephyr" -e OPENAI_API_KEY="YourAPIKey" -e RL_REPLAY_DIR="$(pwd)/examples"  rocketleague-replay-coach
+docker run -e PLAYER_NAME="Ether Zephyr" -e OPENAI_API_KEY="YourAPIKey" -e RL_REPLAY_DIR="/app/examples"  rocketleague-replay-coach
 ```
 
 ### **Local Setup**

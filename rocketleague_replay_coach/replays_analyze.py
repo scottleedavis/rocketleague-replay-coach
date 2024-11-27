@@ -4,7 +4,7 @@ import os
 from openai import OpenAI
 import numpy as np
 import matplotlib
-matplotlib.use('TkAgg')  # or 'Agg' for headless mode
+matplotlib.use('Agg')  # or 'Agg' for headless mode
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 
@@ -339,9 +339,10 @@ def plot_rocket_league_match(filename):
 
 
 def main():
-    input_dir = './csv'  # Directory containing CSV files
-    output_dir = './output'  # Directory to save .md files
-    
+    # Path to the directory containing replay files
+    input_dir = os.path.join(os.getcwd(), 'csv')
+    output_dir = os.path.join(os.getcwd(), 'output')
+
     # Create output directory if it doesn't exist
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
