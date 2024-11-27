@@ -5,14 +5,6 @@ A tool that interfaces with AI for analyzing Rocket League replays, offering ins
 
 ---
 
-### **Features**
-- **Replay Analysis:** Parse Rocket League replays to extract detailed match statistics.
-- **Goal Analysis:** Understand the factors behind goals, assists, and defensive plays.
-- **Individual Insights:** Analyze player-specific contributions to identify strengths and weaknesses.
-- **Integrations:** Extend functionality with tools like CARL for machine learning-driven insights.
-
----
-
 ### **Docker Setup**
 
 ```
@@ -22,10 +14,7 @@ docker build -t rocketleague-replay-coach .
 #### **Example**
 
 ```
-export RL_REPLAY_DIR="/mnt/c/Users/gamez/OneDrive/Documents/My Games/Rocket League/TAGame/DemosEpic/"
-export OPENAI_API_KEY="sk-proj-your-secret-openai-key"
-export PLAYER_NAME="Your Player Name"
-docker run -e PLAYER_NAME="YourPlayerName" -e OPENAI_API_KEY="YourAPIKey" -e RL_REPLAY_DIR="/path/to/replays" rocketleague-replay-coach
+docker run -e PLAYER_NAME="Ether Zephyr" -e OPENAI_API_KEY="YourAPIKey" -e RL_REPLAY_DIR="$(pwd)/examples"  rocketleague-replay-coach
 ```
 
 ### **Local Setup**
@@ -37,10 +26,12 @@ docker run -e PLAYER_NAME="YourPlayerName" -e OPENAI_API_KEY="YourAPIKey" -e RL_
    ```
 2. Install dependencies:
    ```bash
+   python3 -m venv venv
+   source venv/bin/activate  # On Windows, use venv\Scripts\activate
    pip install -r requirements.txt
 
    ```
-3. [rattletrap](https://github.com/tfausak/rattletrap) available on the $PATH (also in this repo)
+3. [rattletrap](https://github.com/tfausak/rattletrap) available on the $PATH (provided in this repo)
 
 
 #### **Example**

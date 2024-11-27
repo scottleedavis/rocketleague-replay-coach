@@ -23,5 +23,5 @@ for replay_file in "$RL_REPLAY_DIR"/*.replay; do
     
 done
 
-python replays_csv.py
-python replays_analyze.py
+python rocketleague_replay_coach/replays_csv.py
+python rocketleague_replay_coach/replays_analyze.py
