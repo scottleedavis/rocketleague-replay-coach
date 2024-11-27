@@ -1,3 +1,8 @@
+csv
+json
+output
+session_summary.md
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
